@@ -1,0 +1,91 @@
+﻿@model JAUNDICE.CORE.Neonate
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<hr />
+<div class="col-md-8 ml-auto mr-auto">
+    <div class="card">
+        <div class="card-header card-header-success card-header-icon">
+            <div class="card-icon">
+                <i class="material-icons">child_care</i>
+            </div>
+            <h4 class="card-title">Create Neonate</h4>
+
+            <div class="card-body">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group bmd-form-group">
+                        <label asp-for="Id" class="bmd-label-floating"></label>
+                        <input asp-for="Id" class="form-control" />
+                        <span asp-validation-for="Id" class="text-danger"></span>
+                    </div>
+                    <div class="form-group bmd-form-group">
+                        @*<label asp-for="ClientId" class="bmd-label-floating"></label>*@
+                        <select asp-for="ClientId" class="form-control" asp-items="ViewBag.ClientId"></select>
+                    </div><br />
+                    <div class="form-group bmd-form-group">
+                        <label asp-for="BilirubunAtBirth" class="bmd-label-floating"></label>
+                        <input asp-for="BilirubunAtBirth" class="form-control" />
+                        <span asp-validation-for="BilirubunAtBirth" class="text-danger"></span>
+                    </div>
+                    <div class="form-group bmd-form-group">
+                        <label asp-for="Dob" class="bmd-label-floating"></label>
+                        <input asp-for="Dob" class="form-control" />
+                        <span asp-validation-for="Dob" class="text-danger"></span>
+                    </div>
+                    @*<div class="form-group bmd-form-group">
+                            <label asp-for="TimeOfBirth" class="bmd-label-floating"></label>
+                            <input asp-for="TimeOfBirth" class="form-control" />
+                            <span asp-validation-for="TimeOfBirth" class="text-danger"></span>
+                        </div>*@
+                    <div class="form-group bmd-form-group">
+                        <label asp-for="BirthWeight" class="bmd-label-floating"></label>
+                        <input asp-for="BirthWeight" class="form-control" />
+                        <span asp-validation-for="BirthWeight" class="text-danger"></span>
+                    </div>
+                    <div class="form-group bmd-form-group">
+                        <label asp-for="GestationalAge" class="bmd-label-floating"></label>
+                        <input asp-for="GestationalAge" class="form-control" />
+                        <span asp-validation-for="GestationalAge" class="text-danger"></span>
+                    </div>
+                    <div class="form-group bmd-form-group">
+                        <label asp-for="MothersFirstName" class="bmd-label-floating"></label>
+                        <input asp-for="MothersFirstName" class="form-control" />
+                        <span asp-validation-for="MothersFirstName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group bmd-form-group">
+                        <label asp-for="MothersMiddleName" class="bmd-label-floating"></label>
+                        <input asp-for="MothersMiddleName" class="form-control" />
+                        <span asp-validation-for="MothersMiddleName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group bmd-form-group">
+                        <label asp-for="MothersLastName" class="bmd-label-floating"></label>
+                        <input asp-for="MothersLastName" class="form-control" />
+                        <span asp-validation-for="MothersLastName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group bmd-form-group">
+                        <label asp-for="MothersNrc" class="bmd-label-floating"></label>
+                        <input asp-for="MothersNrc" class="form-control" />
+                        <span asp-validation-for="MothersNrc" class="text-danger"></span>
+                    </div>
+                    <div class="form-group bmd-form-group">
+                        <input type="submit" value="Create" class="btn btn-success" />
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

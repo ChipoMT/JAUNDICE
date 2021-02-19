@@ -1,0 +1,70 @@
+﻿@model IEnumerable<JAUNDICE.CORE.NeonateDiagnosis>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+    <div class=" row">
+        <div class="col-md-6">
+
+            <div class="card-header card-header-success card-header-icon">
+                <div class="card-body">
+                    <div class="card-icon">
+                        <i class="material-icons">child_care</i>
+                    </div>
+                    <h4 class="card-title">Neonate Diagnosis Index</h4>
+                    <p>
+                        <a asp-action="Create">Create New</a>
+                    </p>
+                    <div class="row">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.NeedForFollowup)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Treatment)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Disorder)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Neonate)
+                                        </th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.NeedForFollowup)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Treatment)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Disorder.Id)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Neonate.Id)
+                                            </td>
+                                            <td>
+                                                <a asp-action="Edit" asp-route-id="@item.NeonateId">Edit</a> |
+                                                <a asp-action="Details" asp-route-id="@item.NeonateId">Details</a> |
+                                                <a asp-action="Delete" asp-route-id="@item.NeonateId">Delete</a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+            

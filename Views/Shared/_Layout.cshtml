@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - JAUNDICE DIAGNOSIS</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/css/css8393.css" rel="stylesheet" />
+    <link href="~/css/material-dashboard.minf066.css" rel="stylesheet" />
+    <link href="~/css/demo.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+</head>
+
+<body class="">
+
+    <noscript>
+        <iframe src="../../../www.googletagmanager.com/ns26b6.html?id=GTM-NKDMSK6" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <div class="wrapper">
+        <div class="sidebar" data-color="rose" data-background-color="black" data-image="assets/img/sidebar-1.jpg">
+            <script type="text/javascript">
+
+                var page = location.pathname;
+
+                if (page.includes("/Identity/Account/")) {
+                    $(".sidebar").hide();
+                }
+
+            </script>
+            <div class="logo">
+                <a href="#" class="simple-text logo-mini">
+                    JD
+                </a>
+                <a href="#" class="simple-text logo-normal">
+                    JAUNDICE DIAGNOSIS
+                </a>
+            </div>
+            <div class="sidebar-wrapper">
+                <div class="user">
+                    <div class="photo">
+                        <img src="../assets/img/faces/avatar.png" />
+                    </div>
+                    <div class="user-info">
+                        <a data-toggle="collapse" href="#collapseExample" class="username">
+                            <span>
+                                @User.Identity.Name
+                                <b class="caret"></b>
+                            </span>
+                        </a>
+                        <div class="collapse" id="collapseExample">
+                            <ul class="nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> MP </span>
+                                        <span class="sidebar-normal"> My Profile </span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> EP </span>
+                                        <span class="sidebar-normal"> Edit Profile </span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> S </span>
+                                        <span class="sidebar-normal"> Settings </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <ul class="nav">
+
+                    <li class="nav-item ">
+                        <a class="nav-link" href="@Url.Action("Create","Clients")">
+                            <i class="material-icons">person</i>
+                            <p>
+                                Parent
+                            </p>
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link" href=" @Url.Action("Create","Neonates")">
+                            <i class="material-icons">child_care</i>
+                            <p>
+                                Neonate
+                            </p>
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link" href=" @Url.Action("Create","NeonateDiagnosis")">
+                            <i class="material-icons">child_care</i>
+                            <p>
+                                Neonate Diagnosis
+                            </p>
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item ">
+                        <a class="nav-link" href=" @Url.Action("Index","Roles")">
+                            <i class="material-icons">person</i>
+                            <p>
+                                Administration
+                            </p>
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">
+                            <i class="material-icons">timeline</i>
+                            <p> DASHBOARD </p>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="main-panel">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+                <div class="container-fluid">
+                    <div class="navbar-wrapper">
+                        <div class="navbar-minimize">
+                            <button id="minimizeSidebar" class="btn btn-just-icon btn-white btn-fab btn-round">
+                                <i class="material-icons text_align-center visible-on-sidebar-regular">more_vert</i>
+                                <i class="material-icons design_bullet-list-67 visible-on-sidebar-mini">view_list</i>
+                            </button>
+                        </div>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="navbar-toggler-icon icon-bar"></span>
+                        <span class="navbar-toggler-icon icon-bar"></span>
+                        <span class="navbar-toggler-icon icon-bar"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="../../../example.com/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="material-icons">notifications</i>
+                                    <span class="notification">5</span>
+                                    <p class="d-lg-none d-md-block">
+                                        Some Actions
+                                    </p>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="#">Mike John responded to your email</a>
+                                    <a class="dropdown-item" href="#">You have 5 new tasks</a>
+                                    <a class="dropdown-item" href="#">You're now friend with Andrew</a>
+                                    <a class="dropdown-item" href="#">Another Notification</a>
+                                    <a class="dropdown-item" href="#">Another One</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="material-icons">person</i>
+                                    <p class="d-lg-none d-md-block">
+                                        Account
+                                    </p>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
+                                    <a class="dropdown-item" href="#">Profile</a>
+                                    <a class="dropdown-item" href="#">Settings</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="/Identity/Account/Login?returnUrl=%2F">Log out</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - FastLink.WEB - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    
+    <script src="~/js/core/popper.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/core/bootstrap-material-design.min.js"></script>
+    <script src="~/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+    <script src="~/js/plugins/jquery.dataTables.min.js"></script>
+    <script src="~/js/plugins/bootstrap-selectpicker.js"></script>
+    <script src="~/js/plugins/bootstrap-tagsinput.js"></script>
+    <script src="~/js/plugins/jasny-bootstrap.min.js"></script>
+    <script src="~/js/plugins/jquery-jvectormap.js"></script>
+    <script src="~/js/plugins/nouislider.min.js"></script>
+    <script src="~/js/plugins/core.js"></script>
+    <script src="~/js/plugins/arrive.min.js"></script>
+    <script src="~/js/plugins/bootstrap-notify.js"></script>
+    <script src="~/js/material-dashboard.minf066.js"></script>
+    <script src="~/js/demo.js"></script>
+    <script src="~/js/Controls.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

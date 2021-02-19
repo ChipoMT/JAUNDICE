@@ -1,0 +1,51 @@
+﻿@model JAUNDICE.CORE.NeonateDiagnosis
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+    <div class="col-md-8 ml-auto mr-auto">
+        <div class="card">
+            <div class="card-header card-header-success card-header-icon">
+                <div class="card-icon">
+                    <i class="material-icons">child_care</i>
+                </div>
+                <h4 class="card-title">Details of Neonate Diagnosis</h4>
+
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.NeedForFollowup)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.NeedForFollowup)
+                        </dd>
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.Treatment)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Treatment)
+                        </dd>
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.Disorder)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Disorder.Id)
+                        </dd>
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.Neonate)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Neonate.Id)
+                        </dd>
+                    </dl>
+                </div>
+
+                <div>
+                </div>
+
+            </div>
+        </div>
+                <a asp-action="Edit" asp-route-id="@Model.NeonateId">Edit</a> |
+                <a asp-action="Index">Back to List</a>
+            </div>

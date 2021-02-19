@@ -1,0 +1,91 @@
+﻿@model JAUNDICE.CORE.Neonate
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+
+<h3>Are you sure you want to delete this?</h3>
+<hr />
+<div class="col-md-6 ml-auto mr-auto">
+    <div class="card">
+        <div class="card-header card-header-success card-header-icon">
+            <div class="card-icon">
+                <i class="material-icons">child_care</i>
+            </div>
+            <h4 class="card-title">Neonate</h4>
+           
+            <a href="C:\Users\Chipo Tambatamba\source\repos\JAUNDICE\JAUNDICE.WEB\Views\Neonates\Delete.cshtml"></a>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.BilirubunAtBirth)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.BilirubunAtBirth)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Dob)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Dob)
+                </dd>
+                @*<dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.TimeOfBirth)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.TimeOfBirth)
+                    </dd>*@
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.BirthWeight)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.BirthWeight)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.GestationalAge)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.GestationalAge)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.MothersFirstName)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.MothersFirstName)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.MothersMiddleName)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.MothersMiddleName)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.MothersLastName)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.MothersLastName)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.MothersNrc)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.MothersNrc)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Client)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Client.Id)
+                </dd>
+            </dl>
+
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="Id" />
+                <input type="submit" value="Delete" class="btn btn-danger" /> |
+                <a asp-action="Index">Back to List</a>
+            </form>
+        </div>
+    </div>
+</div>

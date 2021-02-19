@@ -1,0 +1,104 @@
+﻿@model IEnumerable<JAUNDICE.CORE.Neonate>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div class=" row">
+    <div class="col-md-12">
+
+        <div class="card-header card-header-success card-header-icon">
+            <div class="card-body">
+                <div class="card-icon">
+                    <i class="material-icons">child_care</i>
+                </div>
+                <h4 class="card-title">Neonate Index</h4>
+                <div class="row">
+                    <div class="table-responsive">
+                        <p>
+                            <a asp-action="Create">Create New</a>
+                        </p>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.BilirubunAtBirth)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Dob)
+                                    </th>
+                                    @*<th>
+                                            @Html.DisplayNameFor(model => model.TimeOfBirth)
+                                        </th>*@
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.BirthWeight)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.GestationalAge)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.MothersFirstName)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.MothersMiddleName)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.MothersLastName)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.MothersNrc)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Client)
+                                    </th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.BilirubunAtBirth)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Dob)
+                                        </td>
+                                        @*<td>
+                                                @Html.DisplayFor(modelItem => item.TimeOfBirth)
+                                            </td>*@
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.BirthWeight)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.GestationalAge)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.MothersFirstName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.MothersMiddleName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.MothersLastName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.MothersNrc)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Client.Id)
+                                        </td>
+                                        <td>
+                                            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                                            <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+﻿@model JAUNDICE.CORE.NeonateDiagnosis
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+    <div class="col-md-8 ml-auto mr-auto">
+        <div class="card">
+            <div class="card-header card-header-success card-header-icon">
+                <div class="card-icon">
+                    <i class="material-icons">child_care</i>
+                </div>
+                <h4 class="card-title">Neonate Diagnosis</h4>
+            </div>
+            <div class="card-body">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <br />
+                    <div class="form-group bmd-form-group">
+                        @*<label asp-for="NeonateId" class="bmd-label-floating"></label>*@
+                        <select asp-for="NeonateId" class="form-control" asp-items="ViewBag.NeonateId"></select>
+                    </div>
+                    <br />
+                    <div class="form-group bmd-form-group">
+                        <label asp-for="DisorderId" class="bmd-label-floating"></label>
+                        <select asp-for="DisorderId" class="form-control" asp-items="ViewBag.DisorderId"></select>
+                    </div>
+                    <br /><br />
+                          <div style="margin-bottom:50px;" class="input-field col s10 offset-s1">
+                              <select name="priority" id="priority">
+                                  <option value="" selected></option>
+                                  <option value="high risk">High risk</option>
+                                  <option value="critical">Critical</option>
+                              </select>
+                              <label class="white-text">Response Priority</label>
+                          </div>
+
+                    <div class="form-group bmd-form-group">
+                        <label asp-for="NeedForFollowup" class="bmd-label-floating"></label>
+                        <input asp-for="NeedForFollowup" class="form-control" />
+                        <span asp-validation-for="NeedForFollowup" class="text-danger"></span>
+                    </div>
+                    <div class="form-group bmd-form-group">
+                        <label asp-for="Treatment" class="bmd-label-floating"></label>
+                        <input asp-for="Treatment" class="form-control" />
+                        <span asp-validation-for="Treatment" class="text-danger"></span>
+                    </div>
+                    <div class="form-group bmd-form-group">
+                        <input type="submit" value="Create" class="btn btn-success" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+        <div>
+            <a asp-action="Index">Back to List</a>
+        </div>
+
+        @section Scripts {
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        }
